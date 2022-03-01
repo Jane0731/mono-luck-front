@@ -10,6 +10,7 @@ import {
 import HomePage from "./Home/Home";
 import RegisterPage from "./RegisterPage/registerPage";
 import SearchPage from "./Searchpage/Searchpage";
+import FinishPage from "./RegisterFinishPage/RegisterFinishPage";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,8 @@ ReactDOM.render(
         <Route path="/" element={<HomePage />} />
         <Route path="/registerPage" element={<RegisterPage />} />
         <Route path="/searchPage" element={<SearchPage />} />
+        <Route path="/FinishPage" element={<FinishPage />} />
+
       </Routes>
     </Router>
   </React.StrictMode>,
