@@ -97,7 +97,7 @@ function RegisterPage() {
             <ToggleButton value="01" color="primary">
               01
             </ToggleButton>
-            <ToggleButton value="disabe" disabled></ToggleButton>
+            <ToggleButton value="disabe" disabled ></ToggleButton>
             <ToggleButton value="disabe" disabled></ToggleButton>
             <ToggleButton value="disabe" disabled></ToggleButton>
             <ToggleButton value="disabe" disabled></ToggleButton>
@@ -318,7 +318,6 @@ function RegisterPage() {
             </Button>
           </DialogActions>
         </Dialog>
-        ;
       </div>
     </div>
   );
