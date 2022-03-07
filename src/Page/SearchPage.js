@@ -21,8 +21,11 @@ function SearchPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (num === "") {
-      sethelperTextError("請輸入手機號碼!");
+    if (num == "") {
+      sethelperTextError("請填寫手機號碼");
+      setnumerror(true);
+    } else if (!(/09\d{8,8}$/.test(num) || /886\d{9,9}$/.test(num))) {
+      sethelperTextError("手機號碼格式不正確");
       setnumerror(true);
     } else {
       axios
@@ -43,31 +46,31 @@ function SearchPage() {
   return (
     <div className="box">
       <div className="box2">
-      <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-        <div className="phoneenter">
-          <TextField
-            id="outlined-password-input"
-            onPaste={(e) => e.preventDefault()}
-            value={state.checkcode}
-            inputProps={{inputMode:"numeric"}}
-            label="手機號碼"
-            onChange={(e) => handleChangePhone(e)}
-            helperText={helperTextCorrect}
-            error={numerror}
-            fullWidth
-          />
-        </div>
-        <div className="finishbutton1">
-          <Button
-            variant="contained"
-            type="submit"
-            style={{ backgroundColor: "#02A2EE", color: "#FFFFFF" }}
-            fullWidth
-          >
-            完成
-          </Button>
-        </div>
-      </form>
+        <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+          <div className="phoneenter">
+            <TextField
+              id="outlined-password-input"
+              onPaste={(e) => e.preventDefault()}
+              value={state.checkcode}
+              inputProps={{ inputMode: "numeric" }}
+              label="手機號碼"
+              onChange={(e) => handleChangePhone(e)}
+              helperText={helperTextCorrect}
+              error={numerror}
+              fullWidth
+            />
+          </div>
+          <div className="finishbutton1">
+            <Button
+              variant="contained"
+              type="submit"
+              style={{ backgroundColor: "#02A2EE", color: "#FFFFFF" }}
+              fullWidth
+            >
+              完成
+            </Button>
+          </div>
+        </form>
       </div>
     </div>
   );

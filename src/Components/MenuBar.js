@@ -109,7 +109,7 @@ function MenuBar(props) {
             Monosparta
           </Typography>
         </div>
-        <ListItem disablePadding>
+        <ListItem disablePadding onClick={ClickRegisterPage}>
           <div className="barbutton1">
             <StyledList
               sx={{
@@ -120,7 +120,7 @@ function MenuBar(props) {
                 },
               }}
             >
-              <ListItemButton onClick={ClickRegisterPage}>
+              <ListItemButton >
                 <ListItemIcon>
                   <CreateIcon />
                 </ListItemIcon>
@@ -129,7 +129,7 @@ function MenuBar(props) {
             </StyledList>
           </div>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem disablePadding onClick={ClickSearchPage}>
           <div className="barbutton1">
             <StyledList
               sx={{
@@ -140,7 +140,7 @@ function MenuBar(props) {
                 },
               }}
             >
-              <ListItemButton onClick={ClickSearchPage}>
+              <ListItemButton >
                 <ListItemIcon>
                   <SearchIcon />
                 </ListItemIcon>

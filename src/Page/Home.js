@@ -41,7 +41,7 @@ function Home() {
         <img src={Monologo} alt="Monologo" />
       </div>
       <div className="Text12">MonoLuck</div>
-      <div className="Text22">置物櫃登記系統</div>
+      <div className="Text22">會員置物櫃登記系統</div>
       <div className="Botton">
         <Stack spacing={1}>
           <Button
@@ -52,7 +52,7 @@ function Home() {
             style={{ backgroundColor: "#02A2EE", color: "#FFFFFF" }}
             disableElevation
           >
-            置物櫃登記
+            開始登記
           </Button>
           <Button
             variant="outlined"

@@ -53,10 +53,20 @@ function RegisterPage(props) {
         setcolor("#B00020");
         setnumerror(true);
       }
-    } else if (checkrule == false) {
-      setcolor("#B00020");
+    } else if (!(/09\d{8,8}$/.test(num) || /886\d{9,9}$/.test(num))) {
+      if (checkrule) {
+        sethelperTextError("手機號碼格式不正確");
+        setnumerror(true);
+        setcolor("black");
+      } else {
+        sethelperTextError("手機號碼格式不正確");
+        setcolor("#B00020");
+        setnumerror(true);
+      }
     } else if (Object.keys(chipData).length == 0) {
+      sethelperTextError("請輸入您的手機號碼");
       setnumerror(false);
+      setcolor("black");
       setOpen(true);
     } else {
       setcolor("black");
@@ -104,306 +114,312 @@ function RegisterPage(props) {
   return (
     <div className="bigbox1">
       <div className="bigbox2">
-      <div className="Text1">
-        <Typography variant="body2">
-          請點擊欲租借的置物櫃編號，可選三項，須至少輸入一項，選擇的置物櫃順序為置物櫃抽選志願序。
-        </Typography>
-      </div>
-      <div className="divider1">
-        <Divider variant="middle" />
-      </div>
-      <div>
-        <div className="buttongroup">
-          <div className="group">
-            <ToggleButtonGroup
-              value={formats}
-              onChange={handleFormat}
-              aria-label="text formatting"
-              fullWidth
-            >
-              <ToggleButton value="00" color="primary">
-                00
-              </ToggleButton>
-              <ToggleButton value="01" color="primary">
-                01
-              </ToggleButton>
-              <ToggleButton
-                value="disabe"
-                disabled
-                style={{
-                  backgroundColor: "#E5E5E5",
-                  border: "solid 1px #E0E0E0",
-                }}
-              ></ToggleButton>
-              <ToggleButton
-                value="disabe"
-                disabled
-                style={{
-                  backgroundColor: "#E5E5E5",
-                  border: "solid 1px #E0E0E0",
-                }}
-              ></ToggleButton>
-              <ToggleButton
-                value="disabe"
-                disabled
-                style={{
-                  backgroundColor: "#E5E5E5",
-                  border: "solid 1px #E0E0E0",
-                }}
-              ></ToggleButton>
-              <ToggleButton
-                value="disabe"
-                disabled
-                style={{
-                  backgroundColor: "#E5E5E5",
-                  border: "solid 1px #E0E0E0",
-                }}
-              ></ToggleButton>
-              <ToggleButton value="02" color="primary">
-                02
-              </ToggleButton>
-            </ToggleButtonGroup>
-          </div>
-          <div className="group">
-            <ToggleButtonGroup
-              value={formats}
-              onChange={handleFormat}
-              aria-label="text formatting"
-              fullWidth
-            >
-              <ToggleButton value="03" color="primary">
-                03
-              </ToggleButton>
-              <ToggleButton value="04" color="primary">
-                04
-              </ToggleButton>
-              <ToggleButton
-                value="disabe"
-                disabled
-                style={{
-                  backgroundColor: "#E5E5E5",
-                  border: "solid 1px #E0E0E0",
-                }}
-              ></ToggleButton>
-              <ToggleButton
-                value="disabe"
-                disabled
-                style={{
-                  backgroundColor: "#E5E5E5",
-                  border: "solid 1px #E0E0E0",
-                }}
-              ></ToggleButton>
-              <ToggleButton
-                value="disabe"
-                disabled
-                style={{
-                  backgroundColor: "#E5E5E5",
-                  border: "solid 1px #E0E0E0",
-                }}
-              ></ToggleButton>
-              <ToggleButton
-                value="disabe"
-                disabled
-                style={{
-                  backgroundColor: "#E5E5E5",
-                  border: "solid 1px #E0E0E0",
-                }}
-              ></ToggleButton>
-              <ToggleButton value="05" color="primary">
-                05
-              </ToggleButton>
-            </ToggleButtonGroup>
-          </div>
-          <div className="group">
-            <ToggleButtonGroup
-              value={formats}
-              onChange={handleFormat}
-              aria-label="text formatting"
-              fullWidth
-            >
-              <ToggleButton value="06" color="primary">
-                06
-              </ToggleButton>
-              <ToggleButton value="07" color="primary">
-                07
-              </ToggleButton>
-              <ToggleButton value="08" color="primary">
-                08
-              </ToggleButton>
-              <ToggleButton value="09" color="primary">
-                09
-              </ToggleButton>
-              <ToggleButton value="10" color="primary">
-                10
-              </ToggleButton>
-              <ToggleButton value="11" color="primary">
-                11
-              </ToggleButton>
-              <ToggleButton value="12" color="primary">
-                12
-              </ToggleButton>
-            </ToggleButtonGroup>
-          </div>
-          <div className="group">
-            <ToggleButtonGroup
-              value={formats}
-              onChange={handleFormat}
-              aria-label="text formatting"
-              fullWidth
-            >
-              <ToggleButton value="13" color="primary">
-                13
-              </ToggleButton>
-              <ToggleButton value="14" color="primary">
-                14
-              </ToggleButton>
-              <ToggleButton value="15" color="primary">
-                15
-              </ToggleButton>
-              <ToggleButton value="16" color="primary">
-                16
-              </ToggleButton>
-              <ToggleButton value="17" color="primary">
-                17
-              </ToggleButton>
-              <ToggleButton value="18" color="primary">
-                18
-              </ToggleButton>
-              <ToggleButton value="19" color="primary">
-                19
-              </ToggleButton>
-            </ToggleButtonGroup>
-          </div>
-          <div className="group">
-            <ToggleButtonGroup
-              value={formats}
-              onChange={handleFormat}
-              aria-label="text formatting"
-              fullWidth
-            >
-              <ToggleButton value="20" color="primary">
-                20
-              </ToggleButton>
-              <ToggleButton value="21" color="primary">
-                21
-              </ToggleButton>
-              <ToggleButton value="22" color="primary">
-                22
-              </ToggleButton>
-              <ToggleButton value="23" color="primary">
-                23
-              </ToggleButton>
-              <ToggleButton value="24" color="primary">
-                24
-              </ToggleButton>
-              <ToggleButton value="25" color="primary">
-                25
-              </ToggleButton>
-              <ToggleButton value="26" color="primary">
-                26
-              </ToggleButton>
-            </ToggleButtonGroup>
-          </div>
-          <div className="group">
-            <ToggleButtonGroup
-              value={formats}
-              onChange={handleFormat}
-              aria-label="text formatting"
-              fullWidth
-            >
-              <ToggleButton value="27" color="primary">
-                27
-              </ToggleButton>
-              <ToggleButton value="28" color="primary">
-                28
-              </ToggleButton>
-              <ToggleButton value="29" color="primary">
-                29
-              </ToggleButton>
-              <ToggleButton value="30" color="primary">
-                30
-              </ToggleButton>
-              <ToggleButton value="31" color="primary">
-                31
-              </ToggleButton>
-              <ToggleButton value="32" color="primary">
-                32
-              </ToggleButton>
-              <ToggleButton value="33" color="primary">
-                33
-              </ToggleButton>
-            </ToggleButtonGroup>
-          </div>
-        </div>
-      </div>
-      <div className="choose">
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            listStyle: "none",
-          }}
-          component="ul"
-        >
-          <div className="Textchoose">選擇置物櫃:</div>
-          {chipData.map((data) => {
-            let icon;
-            return (
-              <ListItem>
-                <Chip icon={icon} label={data} onDelete={handleDelete(data)} />
-              </ListItem>
-            );
-          })}
-        </Box>
-      </div>
-      <div className="divider2">
-        <Divider variant="middle" />
-      </div>
-      <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-        <div className="phonenumber">
-          <TextField
-            onPaste={(e) => e.preventDefault()}
-            inputProps={{inputMode:"numeric"}}
-            value={state.checkcode}
-            label="手機號碼"
-            onChange={(e) => handleChangePhone(e)}
-            helperText={helperTextCorrect}
-            error={numerror}
-            fullWidth
-          />
-        </div>
-        <div className="rules">
-          <FormControlLabel
-          label=""
-            control={
-              <Checkbox
-                onChange={handleCheck}
-                checked={checkrule}
-                sx={{ color: { color } }}
-              />
-            }
-          />
-          <div className="checkbox">
-          <Typography variant="body2" sx={{ color: { color } }}>我已閱讀且同意遵守
-          <Link
-            target="_blank"
-            href="https://monospace.guide/books/manual/page/31fef"
-          >新制會員物品管理規範
-          </Link>
+        <div className="Text1">
+          <Typography variant="body2">
+            請點擊欲租借的置物櫃編號，可選三項，須至少輸入一項，選擇的置物櫃順序為置物櫃抽選志願序。
           </Typography>
+        </div>
+        <div className="divider1">
+          <Divider variant="middle" />
+        </div>
+        <div>
+          <div className="buttongroup">
+            <div className="group">
+              <ToggleButtonGroup
+                value={formats}
+                onChange={handleFormat}
+                aria-label="text formatting"
+                fullWidth
+              >
+                <ToggleButton value="00" color="primary">
+                  00
+                </ToggleButton>
+                <ToggleButton value="01" color="primary">
+                  01
+                </ToggleButton>
+                <ToggleButton
+                  value="disabe"
+                  disabled
+                  style={{
+                    backgroundColor: "#E5E5E5",
+                    border: "solid 1px #E0E0E0",
+                  }}
+                ></ToggleButton>
+                <ToggleButton
+                  value="disabe"
+                  disabled
+                  style={{
+                    backgroundColor: "#E5E5E5",
+                    border: "solid 1px #E0E0E0",
+                  }}
+                ></ToggleButton>
+                <ToggleButton
+                  value="disabe"
+                  disabled
+                  style={{
+                    backgroundColor: "#E5E5E5",
+                    border: "solid 1px #E0E0E0",
+                  }}
+                ></ToggleButton>
+                <ToggleButton
+                  value="disabe"
+                  disabled
+                  style={{
+                    backgroundColor: "#E5E5E5",
+                    border: "solid 1px #E0E0E0",
+                  }}
+                ></ToggleButton>
+                <ToggleButton value="02" color="primary">
+                  02
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </div>
+            <div className="group">
+              <ToggleButtonGroup
+                value={formats}
+                onChange={handleFormat}
+                aria-label="text formatting"
+                fullWidth
+              >
+                <ToggleButton value="03" color="primary">
+                  03
+                </ToggleButton>
+                <ToggleButton value="04" color="primary">
+                  04
+                </ToggleButton>
+                <ToggleButton
+                  value="disabe"
+                  disabled
+                  style={{
+                    backgroundColor: "#E5E5E5",
+                    border: "solid 1px #E0E0E0",
+                  }}
+                ></ToggleButton>
+                <ToggleButton
+                  value="disabe"
+                  disabled
+                  style={{
+                    backgroundColor: "#E5E5E5",
+                    border: "solid 1px #E0E0E0",
+                  }}
+                ></ToggleButton>
+                <ToggleButton
+                  value="disabe"
+                  disabled
+                  style={{
+                    backgroundColor: "#E5E5E5",
+                    border: "solid 1px #E0E0E0",
+                  }}
+                ></ToggleButton>
+                <ToggleButton
+                  value="disabe"
+                  disabled
+                  style={{
+                    backgroundColor: "#E5E5E5",
+                    border: "solid 1px #E0E0E0",
+                  }}
+                ></ToggleButton>
+                <ToggleButton value="05" color="primary">
+                  05
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </div>
+            <div className="group">
+              <ToggleButtonGroup
+                value={formats}
+                onChange={handleFormat}
+                aria-label="text formatting"
+                fullWidth
+              >
+                <ToggleButton value="06" color="primary">
+                  06
+                </ToggleButton>
+                <ToggleButton value="07" color="primary">
+                  07
+                </ToggleButton>
+                <ToggleButton value="08" color="primary">
+                  08
+                </ToggleButton>
+                <ToggleButton value="09" color="primary">
+                  09
+                </ToggleButton>
+                <ToggleButton value="10" color="primary">
+                  10
+                </ToggleButton>
+                <ToggleButton value="11" color="primary">
+                  11
+                </ToggleButton>
+                <ToggleButton value="12" color="primary">
+                  12
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </div>
+            <div className="group">
+              <ToggleButtonGroup
+                value={formats}
+                onChange={handleFormat}
+                aria-label="text formatting"
+                fullWidth
+              >
+                <ToggleButton value="13" color="primary">
+                  13
+                </ToggleButton>
+                <ToggleButton value="14" color="primary">
+                  14
+                </ToggleButton>
+                <ToggleButton value="15" color="primary">
+                  15
+                </ToggleButton>
+                <ToggleButton value="16" color="primary">
+                  16
+                </ToggleButton>
+                <ToggleButton value="17" color="primary">
+                  17
+                </ToggleButton>
+                <ToggleButton value="18" color="primary">
+                  18
+                </ToggleButton>
+                <ToggleButton value="19" color="primary">
+                  19
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </div>
+            <div className="group">
+              <ToggleButtonGroup
+                value={formats}
+                onChange={handleFormat}
+                aria-label="text formatting"
+                fullWidth
+              >
+                <ToggleButton value="20" color="primary">
+                  20
+                </ToggleButton>
+                <ToggleButton value="21" color="primary">
+                  21
+                </ToggleButton>
+                <ToggleButton value="22" color="primary">
+                  22
+                </ToggleButton>
+                <ToggleButton value="23" color="primary">
+                  23
+                </ToggleButton>
+                <ToggleButton value="24" color="primary">
+                  24
+                </ToggleButton>
+                <ToggleButton value="25" color="primary">
+                  25
+                </ToggleButton>
+                <ToggleButton value="26" color="primary">
+                  26
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </div>
+            <div className="group">
+              <ToggleButtonGroup
+                value={formats}
+                onChange={handleFormat}
+                aria-label="text formatting"
+                fullWidth
+              >
+                <ToggleButton value="27" color="primary">
+                  27
+                </ToggleButton>
+                <ToggleButton value="28" color="primary">
+                  28
+                </ToggleButton>
+                <ToggleButton value="29" color="primary">
+                  29
+                </ToggleButton>
+                <ToggleButton value="30" color="primary">
+                  30
+                </ToggleButton>
+                <ToggleButton value="31" color="primary">
+                  31
+                </ToggleButton>
+                <ToggleButton value="32" color="primary">
+                  32
+                </ToggleButton>
+                <ToggleButton value="33" color="primary">
+                  33
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </div>
           </div>
         </div>
-        <div className="buttonsend">
-          <Button
-            variant="contained"
-            type="submit"
-            fullWidth
-            style={{ backgroundColor: "#02A2EE", color: "#FFFFFF"}}
+        <div className="choose">
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              listStyle: "none",
+            }}
+            component="ul"
           >
-            送出
-          </Button>
+            <div className="Textchoose">選擇置物櫃:</div>
+            {chipData.map((data) => {
+              let icon;
+              return (
+                <ListItem>
+                  <Chip
+                    icon={icon}
+                    label={data}
+                    onDelete={handleDelete(data)}
+                  />
+                </ListItem>
+              );
+            })}
+          </Box>
         </div>
-      </form>
+        <div className="divider2">
+          <Divider variant="middle" />
+        </div>
+        <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+          <div className="phonenumber">
+            <TextField
+              onPaste={(e) => e.preventDefault()}
+              inputProps={{ inputMode: "numeric" }}
+              value={state.checkcode}
+              label="手機號碼"
+              onChange={(e) => handleChangePhone(e)}
+              helperText={helperTextCorrect}
+              error={numerror}
+              fullWidth
+            />
+          </div>
+          <div className="rules">
+            <FormControlLabel
+              label=""
+              control={
+                <Checkbox
+                  onChange={handleCheck}
+                  checked={checkrule}
+                  sx={{ color: { color } }}
+                />
+              }
+            />
+            <div className="checkbox">
+              <Typography variant="body2" sx={{ color: { color } }}>
+                我已閱讀且同意遵守
+                <Link
+                  target="_blank"
+                  href="https://monospace.guide/books/manual/page/31fef"
+                >
+                  新制會員物品管理規範
+                </Link>
+              </Typography>
+            </div>
+          </div>
+          <div className="buttonsend">
+            <Button
+              variant="contained"
+              type="submit"
+              fullWidth
+              style={{ backgroundColor: "#02A2EE", color: "#FFFFFF" }}
+            >
+              送出
+            </Button>
+          </div>
+        </form>
       </div>
       <div>
         <Dialog
@@ -414,12 +430,12 @@ function RegisterPage(props) {
         >
           <DialogTitle id="alert-dialog-title" class="dialog">
             <ErrorIcon color="primary" />
-            <Typography variant="subtitle1">您尚未選擇置物櫃</Typography>
+            <Typography variant="subtitle1">您尚未選取置物櫃</Typography>
           </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               <Typography variant="body2">
-                請點擊欲租借的置物櫃編號，可選三項，須至少輸入一項
+              請依順序點選置物櫃編號，最多可選取三個置物櫃位置，選取的鎖櫃順序為置物櫃抽選志願序。
               </Typography>
             </DialogContentText>
           </DialogContent>

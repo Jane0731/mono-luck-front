@@ -30,7 +30,6 @@
   font-size: 14px;
   opacity: 60%;
   width: 80%;
-  text-align: center;
   margin: 0 auto;
 }
 .buttongroup {
@@ -44,13 +43,14 @@
 .choose {
   position: relative;
   width: fit-content;
-  height: 50px;
-  top: 25px;
+  height: 80px;
+  top: 38px;
 }
 .Textchoose {
   position: relative;
   width: fit-content;
   padding-top: 10px;
+ 
   font-weight: 700;
   opacity: 60%;
 }
