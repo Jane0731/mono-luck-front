@@ -50,6 +50,7 @@ function Home() {
             fullWidth
             startIcon={<EditIcon />}
             style={{ backgroundColor: "#02A2EE", color: "#FFFFFF" }}
+            disableElevation
           >
             置物櫃登記
           </Button>
