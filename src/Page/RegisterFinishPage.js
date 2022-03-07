@@ -24,9 +24,7 @@ function RegisterFinishPage() {
       </div>
       <div className="textbox">
       <Typography variant="body2" component="div">
-        <div className="text2">置物櫃抽選時間為</div>
-        <div className="text3">10:00 a.m.</div>
-        <div className="text4">12/12 中籤資訊將會公告至本系統。</div>
+        <div className="text2">請於 03/14 中午 12:00 至本系統查詢抽籤結果。</div>
       </Typography>
       </div>
       <div className="finishbutton2">

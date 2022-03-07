@@ -21,7 +21,7 @@ function SearchPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (num == "") {
+    if (num === "") {
       sethelperTextError("請輸入手機號碼!");
       setnumerror(true);
     } else {
