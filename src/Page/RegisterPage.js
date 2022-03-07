@@ -105,7 +105,7 @@ function RegisterPage(props) {
     <div className="bigbox1">
       <div className="Text1">
         <Typography variant="body2">
-          請點擊欲租借的鎖櫃編號，可選三項，須至少輸入一項，選擇的鎖櫃順序為鎖櫃抽選志願序。
+          請點擊欲租借的置物櫃編號，可選三項，須至少輸入一項，選擇的置物櫃順序為置物櫃抽選志願序。
         </Typography>
       </div>
       <div className="divider2">
@@ -344,7 +344,7 @@ function RegisterPage(props) {
           }}
           component="ul"
         >
-          <div className="Textchoose">選擇鎖櫃:</div>
+          <div className="Textchoose">選擇置物櫃:</div>
           {chipData.map((data) => {
             let icon;
             return (
@@ -410,12 +410,12 @@ function RegisterPage(props) {
         >
           <DialogTitle id="alert-dialog-title" class="dialog">
             <ErrorIcon color="primary" />
-            <Typography variant="subtitle1">您尚未選擇鎖櫃</Typography>
+            <Typography variant="subtitle1">您尚未選擇置物櫃</Typography>
           </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               <Typography variant="body2">
-                請點擊欲租借的鎖櫃編號，可選三項，須至少輸入一項
+                請點擊欲租借的置物櫃編號，可選三項，須至少輸入一項
               </Typography>
             </DialogContentText>
           </DialogContent>

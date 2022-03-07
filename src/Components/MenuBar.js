@@ -37,7 +37,7 @@ function MenuBar(props) {
   };
   const MenuBarTitleMap = [
     { path: "/", title: "首頁" },
-    { path: "/RegisterPage", title: "鎖櫃登記" },
+    { path: "/RegisterPage", title: "置物櫃登記" },
     { path: "/SearchPage", title: "查詢登記" },
     { path: "/RegisterFinishPage", title: "登記成功" },
     { path: "/SearchPageWait", title: "查詢登記" },
@@ -124,7 +124,7 @@ function MenuBar(props) {
                 <ListItemIcon>
                   <CreateIcon />
                 </ListItemIcon>
-                <Typography variant="subtitle2">鎖櫃登記</Typography>
+                <Typography variant="subtitle2">置物櫃登記</Typography>
               </ListItemButton>
             </StyledList>
           </div>
@@ -187,12 +187,12 @@ function MenuBar(props) {
         >
           <DialogTitle id="alert-dialog-title" class="dialog">
             <ErrorIcon color="primary" />
-            <Typography variant="subtitle1">鎖櫃登記已結束</Typography>
+            <Typography variant="subtitle1">置物櫃登記已結束</Typography>
           </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               <Typography variant="body2">
-                鎖櫃登記已結束，請於 12/12 AM 10 回來本系統查看中籤資訊
+                置物櫃登記已結束，請於 12/12 AM 10 回來本系統查看中籤資訊
               </Typography>
             </DialogContentText>
           </DialogContent>

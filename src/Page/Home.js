@@ -41,7 +41,7 @@ function Home() {
         <img src={Monologo} alt="Monologo" />
       </div>
       <div className="Text12">MonoLuck</div>
-      <div className="Text22">鎖櫃登記系統</div>
+      <div className="Text22">置物櫃登記系統</div>
       <div className="Botton">
         <Stack spacing={1}>
           <Button
@@ -51,7 +51,7 @@ function Home() {
             startIcon={<EditIcon />}
             style={{ backgroundColor: "#02A2EE", color: "#FFFFFF" }}
           >
-            鎖櫃登記
+            置物櫃登記
           </Button>
           <Button
             variant="outlined"
@@ -73,12 +73,12 @@ function Home() {
         >
           <DialogTitle id="alert-dialog-title" class="dialog">
             <ErrorIcon color="primary" />
-            <Typography variant="subtitle1">鎖櫃登記已結束</Typography>
+            <Typography variant="subtitle1">置物櫃登記已結束</Typography>
           </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               <Typography variant="body2">
-              鎖櫃登記已結束，請於 12/12 AM 10 回來本系統查看中籤資訊
+              置物櫃登記已結束，請於 12/12 AM 10 回來本系統查看中籤資訊
               </Typography>
             </DialogContentText>
           </DialogContent>
