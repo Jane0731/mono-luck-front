@@ -4,7 +4,7 @@
   width: 100%;
   margin: 0 auto;
 }
-.bigbox2 {
+.bigbox2{
   position: relative;
   width: fit-content;
   margin: 0 auto;
@@ -62,9 +62,13 @@
 }
 .rules {
   position: relative;
-  width: fit-content;
+
+  width: 85%;
   margin: 0 auto;
   top: 30px;
+}
+.checkbox{
+  display: inline-block;
 }
 .checkbox {
   display: inline-block;

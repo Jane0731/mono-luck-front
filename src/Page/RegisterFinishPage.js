@@ -28,7 +28,7 @@ function RegisterFinishPage() {
       </Typography>
       </div>
       <div className="finishbutton2">
-      <Button variant="contained" onClick={handleclick} fullWidth>完成</Button>
+      <Button variant="contained" onClick={handleclick} fullWidth style={{ backgroundColor: "#02A2EE", color: "#FFFFFF" }}>完成</Button>
       </div>
     </div>
   );

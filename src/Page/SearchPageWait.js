@@ -15,7 +15,7 @@ function SearchPageWait() {
     <div className="bigbox">
       <div className="content">
         <Typography variant="body2" component="div">
-          <div className="waitingtext">{message}</div>
+          <div className="waitingtext">置物櫃登記期間已截止，請於 03/14 中午 12:00 至本系統查詢抽籤結果。</div>
         </Typography>
         <div className="button">
           <Button

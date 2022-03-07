@@ -12,7 +12,7 @@
 }
 .button{
     position: relative;
-    width: 300px;
+    width: 360px;
     margin: 0 auto;
     top: 20px;
 }
@@ -20,4 +20,9 @@
     position: relative;
     margin: 0 auto;
     top: 30px;
+}
+@media(max-width:380px){
+    .button{
+        width: 90%;
+    }
 }
