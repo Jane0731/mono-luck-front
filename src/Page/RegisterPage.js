@@ -50,11 +50,11 @@ function RegisterPage(props) {
         setcolor("black");
       } else {
         sethelperTextError("請填寫手機號碼");
-        setcolor("red");
+        setcolor("#B00020");
         setnumerror(true);
       }
     } else if (checkrule == false) {
-      setcolor("red");
+      setcolor("#B00020");
     } else if (Object.keys(chipData).length == 0) {
       setnumerror(false);
       setOpen(true);
@@ -374,7 +374,7 @@ function RegisterPage(props) {
         </div>
         <div className="rules">
           <FormControlLabel
-            label="我已閱讀且同意遵守"
+          label=""
             control={
               <Checkbox
                 onChange={handleCheck}
@@ -382,14 +382,16 @@ function RegisterPage(props) {
                 sx={{ color: { color } }}
               />
             }
-            sx={{ color: { color } }}
           />
+          <div className="checkbox">
+          <Typography variant="body2" sx={{ color: { color } }}>我已閱讀且同意遵守
           <Link
             target="_blank"
             href="https://monospace.guide/books/manual/page/31fef"
-          >
-            新制會員物品管理規範
+          >新制會員物品管理規範
           </Link>
+          </Typography>
+          </div>
         </div>
         <div className="buttonsend">
           <Button
