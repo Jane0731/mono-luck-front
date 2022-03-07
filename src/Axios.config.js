@@ -1,7 +1,7 @@
 import Axios from "axios"
 const axios = (baseURL) => {
 const instance = Axios.create({
-baseURL: "https://mono-luck-back.herokuapp.com/",//back-end
+baseURL: process.env.REACT_APP_BACK_END,//back-end
 headers: { 'Content-Type': 'application/json' },
 timeout: 5000,
 });
