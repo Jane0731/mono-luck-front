@@ -8,6 +8,12 @@
     width: fit-content;
   }
 }
+.bigbox2{
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
 .num_class {
   background: #ffffff;
   border: 1px solid #e0e0e0;
@@ -36,32 +42,32 @@
   position: relative;
   display: flexbox;
   width: 85%;
-  height: 368px;
-  top: 50px;
-  margin-top: 20px;
+  height: fit-content;
+  top: 30px;
   margin: 0 auto;
 }
 .choose{
   position: relative;
-  width: 320px;
-  height: 48px;
-  margin: 0 auto;
-  margin-top: 45px;
+  width: fit-content;
+  margin-left: 5vw; ;
+  height: 50px;
+  top: 25px;
 }
 .Textchoose{
   position: relative;
   width: fit-content;
-  padding-top: 2px;
+  padding-top: 10px;
 }
 .phonenumber{
   position: relative;
   width: 80%;
-  top: 15px;
+  top: 25px;
   margin: 0 auto;
 }
 .rules{
   position: relative;
-  width: 80%;
+  width: fit-content;
+  font-size: 14px;
   margin: 0 auto;
   top :20px;
 }
@@ -78,14 +84,15 @@
 .dialog{
   text-align: center;
 }
-.divider{
+.divider1{
   position: relative;
   width: 90%;
+  top: 35px;
   margin: 0 auto;
 }
 .divider2{
   position: relative;
   width: 90%;
-  top: 30px;
+  top: 15px;
   margin: 0 auto;
 }

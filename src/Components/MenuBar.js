@@ -154,7 +154,7 @@ function MenuBar(props) {
   );
   return (
     <div>
-      <AppBar class="bar">
+      <AppBar class="bar" position="fixed">
         <Toolbar>
           <IconButton
             size="large"
