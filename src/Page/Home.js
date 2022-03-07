@@ -24,12 +24,12 @@ function Home() {
     setOpen(false);
   };
   const ClickRegisterPage = () => {
-    let time = new Date();
-    let theTime = time.getTime();
-    if (true) {
-      history("/RegisterPage");
-    } else {
+    let nowDate = new Date();
+    let endDate = "2022/03/13 23:59:59";
+    if (Date.parse(nowDate).valueOf() > Date.parse(endDate).valueOf()) {
       setOpen(true);
+    } else {
+      history("/RegisterPage");
     }
   };
   const ClickSearchPage = () => {
@@ -78,7 +78,7 @@ function Home() {
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               <Typography variant="body2">
-              置物櫃登記已結束，請於 12/12 AM 10 回來本系統查看中籤資訊
+                置物櫃登記已結束，請於 12/12 AM 10 回來本系統查看中籤資訊
               </Typography>
             </DialogContentText>
           </DialogContent>

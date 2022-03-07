@@ -75,12 +75,12 @@ function MenuBar(props) {
     },
   });
   const ClickRegisterPage = () => {
-    let time = new Date();
-    let theTime = time.getTime();
-    if (true) {
-      history("/RegisterPage");
-    } else {
+    let nowDate = new Date();
+    let endDate = "2022/03/13 23:59:59";
+    if (Date.parse(nowDate).valueOf() > Date.parse(endDate).valueOf()) {
       setOpen(true);
+    } else {
+      history("/RegisterPage");
     }
   };
   const [Open, setOpen] = useState(false);
