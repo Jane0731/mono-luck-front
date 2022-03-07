@@ -1,75 +1,35 @@
 import * as React from "react";
-import { Button, TextField } from "@mui/material";
-import "./SearchPage.css";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import axios from "../Axios.config";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import { useNavigate, useLocation } from "react-router-dom";
+import "./SearchPageWait.css";
 
-function SearchPage() {
+function SearchPageWait() {
   let history = useNavigate();
-  const [state, setstate] = useState("");
-  const [helperTextCorrect, sethelperTextError] =
-    useState("請輸入您的手機號碼");
-  const [numerror, setnumerror] = useState(false);
-  const [num, setnum] = useState("");
-
-  const handleChangePhone = (e) => {
-    let value = e.target.value.replace(/[^\d]/, "");
-    setstate({ checkcode: value });
-    setnum(value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (num === "") {
-      sethelperTextError("請輸入手機號碼!");
-      setnumerror(true);
-    } else {
-      axios
-        .get("/api/lottery", {
-          params: {
-            phone: num,
-          },
-        })
-        .then((response) => {
-          history("/SearchPageWait", { state: response.data.message });
-        })
-        .catch((error) => {
-          setnumerror(true);
-          sethelperTextError(error.response.data["message"]);
-        });
-    }
+  let location = useLocation();
+  let message = location.state;
+  const handleclick = (e) => {
+    history("/");
   };
   return (
-    <div className="box">
-      <div className="box2">
-      <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-        <div className="phoneenter">
-          <TextField
-            id="outlined-password-input"
-            onPaste={(e) => e.preventDefault()}
-            value={state.checkcode}
-            inputProps={{inputMode:"numeric"}}
-            label="手機號碼"
-            onChange={(e) => handleChangePhone(e)}
-            helperText={helperTextCorrect}
-            error={numerror}
-            fullWidth
-          />
-        </div>
-        <div className="finishbutton1">
+    <div className="bigbox">
+      <div className="content">
+        <Typography variant="body2" component="div">
+          <div className="waitingtext">置物櫃登記期間已截止，請於 03/14 中午 12:00 至本系統查詢抽籤結果。</div>
+        </Typography>
+        <div className="button">
           <Button
             variant="contained"
-            type="submit"
-            style={{ backgroundColor: "#02A2EE", color: "#FFFFFF" }}
             fullWidth
+            onClick={handleclick}
+            style={{ backgroundColor: "#02A2EE", color: "#FFFFFF" }}
           >
             完成
           </Button>
         </div>
-      </form>
       </div>
     </div>
   );
 }
-export default SearchPage;
+
+export default SearchPageWait;

@@ -1,9 +1,10 @@
-.bigbox1{
+.bigbox1 {
   position: relative;
   height: 100%;
   width: 100%;
-  margin: 0 auto;}
-.bigbox2{
+  margin: 0 auto;
+}
+.bigbox2 {
   position: relative;
   width: fit-content;
   margin: 0 auto;
@@ -16,15 +17,15 @@
   background: #9b9a9a;
   border: 1px solid #e0e0e0;
 }
-.input_num_text{
+.input_num_text {
   justify-content: center;
 }
-.finish_btn{
+.finish_btn {
   padding: 8px;
 }
-.Text1{
+.Text1 {
   position: relative;
-  top:20px;
+  top: 20px;
   margin-top: 10px;
   font-size: 14px;
   opacity: 60%;
@@ -32,60 +33,63 @@
   text-align: center;
   margin: 0 auto;
 }
-.buttongroup{
+.buttongroup {
   position: relative;
   display: flexbox;
-  width: 85%;
+  width: 75%;
   height: fit-content;
   top: 30px;
   margin: 0 auto;
 }
-.choose{
+.choose {
   position: relative;
   width: fit-content;
-  margin-left: 10px ;
   height: 50px;
   top: 25px;
 }
-.Textchoose{
+.Textchoose {
   position: relative;
   width: fit-content;
   padding-top: 10px;
+  font-weight: 700;
+  opacity: 60%;
 }
-.phonenumber{
+.phonenumber {
   position: relative;
   width: 85%;
   top: 30px;
   margin: 0 auto;
 }
-.rules{
+.rules {
   position: relative;
   width: fit-content;
-  font-size: 14px;
   margin: 0 auto;
-  top :30px;
+  top: 30px;
 }
-.buttonsend{
+.checkbox {
+  display: inline-block;
+  position: relative;
+}
+.buttonsend {
   position: relative;
   width: 85%;
   top: 40px;
   margin: 0 auto;
-  padding: 10px;
 }
-.group{
+.group {
   position: relative;
   margin-top: 10px;
 }
-.dialog{
+.dialog {
   text-align: center;
 }
-.divider1{
+.divider1 {
   position: relative;
   width: 90%;
   top: 25px;
   margin: 0 auto;
 }
-.divider2{
+.divider2 {
   position: relative;
   width: 90%;
   margin: 0 auto;
