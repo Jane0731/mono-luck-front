@@ -43,8 +43,8 @@
 .choose {
   position: relative;
   width: fit-content;
-  height: 80px;
-  top: 38px;
+  height: 50px;
+  top: 25px;
 }
 .Textchoose {
   position: relative;
@@ -76,6 +76,7 @@
   width: 85%;
   top: 40px;
   margin: 0 auto;
+  padding:15px;
 }
 .group {
   position: relative;
