@@ -34,7 +34,7 @@
   margin-top: 10px;
   font-size: 14px;
   opacity: 60%;
-  width: 90%;
+  width: 80%;
   text-align: center;
   margin: 0 auto;
 }
@@ -49,7 +49,7 @@
 .choose{
   position: relative;
   width: fit-content;
-  margin-left: 5vw; ;
+  margin-left: 10px ;
   height: 50px;
   top: 25px;
 }
@@ -60,8 +60,8 @@
 }
 .phonenumber{
   position: relative;
-  width: 80%;
-  top: 25px;
+  width: 85%;
+  top: 30px;
   margin: 0 auto;
 }
 .rules{
@@ -69,12 +69,12 @@
   width: fit-content;
   font-size: 14px;
   margin: 0 auto;
-  top :20px;
+  top :30px;
 }
 .buttonsend{
   position: relative;
-  width: 80%;
-  top: 30px;
+  width: 85%;
+  top: 40px;
   margin: 0 auto;
 }
 .group{
@@ -87,12 +87,12 @@
 .divider1{
   position: relative;
   width: 90%;
-  top: 35px;
+  top: 25px;
   margin: 0 auto;
 }
 .divider2{
   position: relative;
   width: 90%;
-  top: 15px;
   margin: 0 auto;
+  top: 15px;
 }

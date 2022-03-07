@@ -42,6 +42,7 @@ function SearchPage() {
   };
   return (
     <div className="box">
+      <div className="box2">
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
         <div className="phoneenter">
           <TextField
@@ -67,6 +68,7 @@ function SearchPage() {
           </Button>
         </div>
       </form>
+      </div>
     </div>
   );
 }

@@ -103,12 +103,13 @@ function RegisterPage(props) {
   };
   return (
     <div className="bigbox1">
+      <div className="bigbox2">
       <div className="Text1">
         <Typography variant="body2">
           請點擊欲租借的置物櫃編號，可選三項，須至少輸入一項，選擇的置物櫃順序為置物櫃抽選志願序。
         </Typography>
       </div>
-      <div className="divider2">
+      <div className="divider1">
         <Divider variant="middle" />
       </div>
       <div>
@@ -355,7 +356,7 @@ function RegisterPage(props) {
           })}
         </Box>
       </div>
-      <div className="divider">
+      <div className="divider2">
         <Divider variant="middle" />
       </div>
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
@@ -401,6 +402,7 @@ function RegisterPage(props) {
           </Button>
         </div>
       </form>
+      </div>
       <div>
         <Dialog
           open={Open}
