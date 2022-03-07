@@ -78,8 +78,7 @@ function Home() {
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               <Typography variant="body2">
-                置物櫃登記已結束，請於 12/12 AM 10 回來本系統查看中籤資訊
-              </Typography>
+              置物櫃登記期間已截止，請於 03/14 中午 12:00 至本系統查詢抽籤結果。              </Typography>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
