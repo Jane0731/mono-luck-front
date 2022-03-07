@@ -3,14 +3,8 @@
   height: 100%;
   width: 100%;
   margin: 0 auto;}
-@media (max-width:380px){
-  .bigbox1{
-    width: fit-content;
-  }
-}
 .bigbox2{
   position: relative;
-  display: block;
   width: fit-content;
   margin: 0 auto;
 }
@@ -76,6 +70,7 @@
   width: 85%;
   top: 40px;
   margin: 0 auto;
+  padding: 10px;
 }
 .group{
   position: relative;
