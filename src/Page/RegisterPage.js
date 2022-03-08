@@ -54,7 +54,7 @@ function RegisterPage(props) {
         setnumerror(true);
       }
     } 
-    else if (!(/09\d{8,8}$/.test(num) || /886\d{9,9}$/.test(num))) {
+    else if (!(/09\d{8,8}$/.test(num) || /8869\d{8,8}$/.test(num))) {
       if (checkrule) {
         sethelperTextError("非暢遊會員,無法登記鎖櫃!")
         setnumerror(true);
