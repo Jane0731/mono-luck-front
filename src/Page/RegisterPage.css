@@ -41,7 +41,7 @@
   margin: 0 auto;
 }@media(max-width:380px){
   .buttongroup{
-    width: fit-contentgit ;
+    width: fit-content ;
   }
 }
 .choose {
