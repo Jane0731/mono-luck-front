@@ -46,18 +46,18 @@ function RegisterPage(props) {
     if (!(/09\d{8,8}$/.test(num) || /8869\d{8,8}$/.test(num)) || num == "") {
       if (checkrule) {
         if (Object.keys(chipData).length == 0) {
-          sethelperTextError("非暢遊會員,無法登記鎖櫃!");
-          setnumerror(true);
-          setcolor("black");
           setOpen(true);
         }
+        sethelperTextError("非暢遊會員,無法登記鎖櫃!");
+        setnumerror(true);
+        setcolor("black");
       } else {
         if (Object.keys(chipData).length == 0) {
-          sethelperTextError("非暢遊會員,無法登記鎖櫃!");
-          setnumerror(true);
-          setcolor("#B00020");
           setOpen(true);
         }
+        sethelperTextError("非暢遊會員,無法登記鎖櫃!");
+        setnumerror(true);
+        setcolor("#B00020");
       }
     } else if (!checkrule) {
       if (Object.keys(chipData).length == 0) {
