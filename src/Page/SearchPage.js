@@ -25,7 +25,7 @@ function SearchPage() {
       sethelperTextError("請填寫手機號碼");
       setnumerror(true);
     } else if (!(/09\d{8,8}$/.test(num) || /886\d{9,9}$/.test(num))) {
-      sethelperTextError("手機號碼格式不正確");
+      sethelperTextError("非暢遊會員,無法登記鎖櫃!")
       setnumerror(true);
     } else {
       axios
