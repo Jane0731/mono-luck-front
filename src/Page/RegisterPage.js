@@ -43,30 +43,29 @@ function RegisterPage(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (num == "") {
+    if (!(/09\d{8,8}$/.test(num) || /8869\d{8,8}$/.test(num)) || num == "") {
       if (checkrule) {
-        sethelperTextError("請填寫手機號碼");
-        setnumerror(true);
-        setcolor("black");
+        if (Object.keys(chipData).length == 0) {
+          sethelperTextError("非暢遊會員,無法登記鎖櫃!");
+          setnumerror(true);
+          setcolor("black");
+          setOpen(true);
+        }
       } else {
-        sethelperTextError("請填寫手機號碼");
-        setcolor("#B00020");
-        setnumerror(true);
+        if (Object.keys(chipData).length == 0) {
+          sethelperTextError("非暢遊會員,無法登記鎖櫃!");
+          setnumerror(true);
+          setcolor("#B00020");
+          setOpen(true);
+        }
       }
-    } 
-    else if (!(/09\d{8,8}$/.test(num) || /8869\d{8,8}$/.test(num))) {
-      if (checkrule) {
-        sethelperTextError("非暢遊會員,無法登記鎖櫃!")
-        setnumerror(true);
-        setcolor("black");
-      } else {
-        sethelperTextError("非暢遊會員,無法登記鎖櫃!")
+    } else if (!checkrule) {
+      if (Object.keys(chipData).length == 0) {
+        sethelperTextError("請輸入您的手機號碼");
+        setnumerror(false);
         setcolor("#B00020");
-        setnumerror(true);
+        setOpen(true);
       }
-    }else if(!checkrule)
-    {
-      setcolor("#B00020");
     } else if (Object.keys(chipData).length == 0) {
       sethelperTextError("請輸入您的手機號碼");
       setnumerror(false);
@@ -74,6 +73,9 @@ function RegisterPage(props) {
       setOpen(true);
     } else {
       setcolor("black");
+      sethelperTextError("請輸入您的手機號碼");
+      setnumerror(false);
+
       let lock = `${chipData}`;
       const json = JSON.stringify({ phone: num, priority: lock });
       axios
@@ -135,10 +137,18 @@ function RegisterPage(props) {
                 aria-label="text formatting"
                 fullWidth
               >
-                <ToggleButton value="00" color="primary" style={{color: "#000000" }}>
+                <ToggleButton
+                  value="00"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   00
                 </ToggleButton>
-                <ToggleButton value="01" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="01"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   01
                 </ToggleButton>
                 <ToggleButton
@@ -173,7 +183,11 @@ function RegisterPage(props) {
                     border: "solid 1px #E0E0E0",
                   }}
                 ></ToggleButton>
-                <ToggleButton value="02" color="primary" style={{color: "#000000" }}>
+                <ToggleButton
+                  value="02"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   02
                 </ToggleButton>
               </ToggleButtonGroup>
@@ -185,10 +199,18 @@ function RegisterPage(props) {
                 aria-label="text formatting"
                 fullWidth
               >
-                <ToggleButton value="03" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="03"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   03
                 </ToggleButton>
-                <ToggleButton value="04" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="04"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   04
                 </ToggleButton>
                 <ToggleButton
@@ -223,7 +245,11 @@ function RegisterPage(props) {
                     border: "solid 1px #E0E0E0",
                   }}
                 ></ToggleButton>
-                <ToggleButton value="05" color="primary" style={{color: "#000000" }}>
+                <ToggleButton
+                  value="05"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   05
                 </ToggleButton>
               </ToggleButtonGroup>
@@ -235,25 +261,53 @@ function RegisterPage(props) {
                 aria-label="text formatting"
                 fullWidth
               >
-                <ToggleButton value="06" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="06"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   06
                 </ToggleButton>
-                <ToggleButton value="07" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="07"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   07
                 </ToggleButton>
-                <ToggleButton value="08" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="08"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   08
                 </ToggleButton>
-                <ToggleButton value="09" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="09"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   09
                 </ToggleButton>
-                <ToggleButton value="10" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="10"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   10
                 </ToggleButton>
-                <ToggleButton value="11" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="11"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   11
                 </ToggleButton>
-                <ToggleButton value="12" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="12"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   12
                 </ToggleButton>
               </ToggleButtonGroup>
@@ -265,25 +319,53 @@ function RegisterPage(props) {
                 aria-label="text formatting"
                 fullWidth
               >
-                <ToggleButton value="13" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="13"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   13
                 </ToggleButton>
-                <ToggleButton value="14" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="14"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   14
                 </ToggleButton>
-                <ToggleButton value="15" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="15"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   15
                 </ToggleButton>
-                <ToggleButton value="16" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="16"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   16
                 </ToggleButton>
-                <ToggleButton value="17" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="17"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   17
                 </ToggleButton>
-                <ToggleButton value="18" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="18"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   18
                 </ToggleButton>
-                <ToggleButton value="19" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="19"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   19
                 </ToggleButton>
               </ToggleButtonGroup>
@@ -295,25 +377,53 @@ function RegisterPage(props) {
                 aria-label="text formatting"
                 fullWidth
               >
-                <ToggleButton value="20" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="20"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   20
                 </ToggleButton>
-                <ToggleButton value="21" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="21"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   21
                 </ToggleButton>
-                <ToggleButton value="22" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="22"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   22
                 </ToggleButton>
-                <ToggleButton value="23" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="23"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   23
                 </ToggleButton>
-                <ToggleButton value="24" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="24"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   24
                 </ToggleButton>
-                <ToggleButton value="25" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="25"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   25
                 </ToggleButton>
-                <ToggleButton value="26" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="26"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   26
                 </ToggleButton>
               </ToggleButtonGroup>
@@ -325,25 +435,53 @@ function RegisterPage(props) {
                 aria-label="text formatting"
                 fullWidth
               >
-                <ToggleButton value="27" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="27"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   27
                 </ToggleButton>
-                <ToggleButton value="28" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="28"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   28
                 </ToggleButton>
-                <ToggleButton value="29" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="29"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   29
                 </ToggleButton>
-                <ToggleButton value="30" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="30"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   30
                 </ToggleButton>
-                <ToggleButton value="31" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="31"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   31
                 </ToggleButton>
-                <ToggleButton value="32" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="32"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   32
                 </ToggleButton>
-                <ToggleButton value="33" color="primary"style={{color: "#000000" }}>
+                <ToggleButton
+                  value="33"
+                  color="primary"
+                  style={{ color: "#000000" }}
+                >
                   33
                 </ToggleButton>
               </ToggleButtonGroup>
@@ -439,7 +577,7 @@ function RegisterPage(props) {
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               <Typography variant="body2">
-              請依順序點選置物櫃編號，最多可選取三個置物櫃位置，選取的鎖櫃順序為置物櫃抽選志願序。
+                請依順序點選置物櫃編號，最多可選取三個置物櫃位置，選取的鎖櫃順序為置物櫃抽選志願序。
               </Typography>
             </DialogContentText>
           </DialogContent>
