@@ -91,12 +91,12 @@ function RegisterPage(props) {
   };
 
   const handleCheck = () => {
-    setcheckrule(!checkrule);
     if(checkrule){
-      setcolor("black");
-    } else{
       setcolor("#B00020");
+    } else{
+      setcolor("black");
     }
+    setcheckrule(!checkrule);
   };
 
   const handleChangePhone = (e) => {
