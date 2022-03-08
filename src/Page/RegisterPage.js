@@ -53,7 +53,8 @@ function RegisterPage(props) {
         setcolor("#B00020");
         setnumerror(true);
       }
-    } else if (!(/09\d{8,8}$/.test(num) || /886\d{9,9}$/.test(num))) {
+    } 
+    else if (!(/09\d{8,8}$/.test(num) || /886\d{9,9}$/.test(num))) {
       if (checkrule) {
         sethelperTextError("手機號碼格式不正確");
         setnumerror(true);
@@ -63,6 +64,9 @@ function RegisterPage(props) {
         setcolor("#B00020");
         setnumerror(true);
       }
+    }else if(!checkrule)
+    {
+      setcolor("#B00020");
     } else if (Object.keys(chipData).length == 0) {
       sethelperTextError("請輸入您的手機號碼");
       setnumerror(false);
