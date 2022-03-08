@@ -61,11 +61,11 @@ function RegisterPage(props) {
       }
     } else if (!checkrule) {
       if (Object.keys(chipData).length == 0) {
-        sethelperTextError("請輸入您的手機號碼");
-        setnumerror(false);
-        setcolor("#B00020");
         setOpen(true);
       }
+      sethelperTextError("請輸入您的手機號碼");
+      setnumerror(false);
+      setcolor("#B00020");
     } else if (Object.keys(chipData).length == 0) {
       sethelperTextError("請輸入您的手機號碼");
       setnumerror(false);
