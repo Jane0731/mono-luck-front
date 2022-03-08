@@ -17,6 +17,8 @@ function SearchPage() {
     let value = e.target.value.replace(/[^\d]/, "");
     setstate({ checkcode: value });
     setnum(value);
+    sethelperTextError("");
+    setnumerror(false);
   };
 
   const handleSubmit = (e) => {

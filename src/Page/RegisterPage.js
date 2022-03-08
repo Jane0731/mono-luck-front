@@ -92,12 +92,19 @@ function RegisterPage(props) {
 
   const handleCheck = () => {
     setcheckrule(!checkrule);
+    if(checkrule){
+      setcolor("black");
+    } else{
+      setcolor("#B00020");
+    }
   };
 
   const handleChangePhone = (e) => {
     let value = e.target.value.replace(/[^\d]/, "");
     setstate({ checkcode: value });
     setnum(value);
+    sethelperTextError("");
+    setnumerror(false);
   };
 
   const handleDelete = (chipToDelete) => () => {
