@@ -56,11 +56,11 @@ function RegisterPage(props) {
     } 
     else if (!(/09\d{8,8}$/.test(num) || /886\d{9,9}$/.test(num))) {
       if (checkrule) {
-        sethelperTextError("手機號碼格式不正確");
+        sethelperTextError("非暢遊會員,無法登記鎖櫃!")
         setnumerror(true);
         setcolor("black");
       } else {
-        sethelperTextError("手機號碼格式不正確");
+        sethelperTextError("非暢遊會員,無法登記鎖櫃!")
         setcolor("#B00020");
         setnumerror(true);
       }
