@@ -39,6 +39,10 @@
   height: fit-content;
   top: 30px;
   margin: 0 auto;
+}@media(max-width:380px){
+  .buttongroup{
+    width: fit-contentgit ;
+  }
 }
 .choose {
   position: relative;
