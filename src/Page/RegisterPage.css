@@ -32,6 +32,12 @@
   width: 80%;
   margin: 0 auto;
 }
+.choose {
+  position: relative;
+  width: fit-content;
+  height: 50px;
+  top: 25px;
+}
 .buttongroup {
   position: relative;
   display: flexbox;
@@ -41,20 +47,16 @@
   margin: 0 auto;
 }@media(max-width:380px){
   .buttongroup{
-    width: fit-contentgit ;
+    width: fit-content;
   }
-}
-.choose {
-  position: relative;
-  width: fit-content;
-  height: 50px;
-  top: 25px;
+  .choose{
+    font-size: small;
+  }
 }
 .Textchoose {
   position: relative;
   width: fit-content;
   padding-top: 10px;
- 
   font-weight: 700;
   opacity: 60%;
 }
