@@ -17,7 +17,7 @@ function SearchPage() {
     let value = e.target.value.replace(/[^\d]/, "");
     setstate({ checkcode: value });
     setnum(value);
-    sethelperTextError("");
+    sethelperTextError("請輸入您的手機號碼");
     setnumerror(false);
   };
 
